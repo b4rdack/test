@@ -79,3 +79,20 @@
   <p class="muted">No articles yet.</p>
   {{- end }}
 </section>
+
+<script>
+(function() {
+  // Находим первую кнопку категории и активируем её
+  var firstHubButton = document.querySelector('[data-hub-filters] .hub-pill');
+  if (firstHubButton) {
+    // Если есть активная кнопка All - убираем её класс
+    var allButton = document.querySelector('[data-hub-filters] .hub-pill[data-hub="all"]');
+    if (allButton) allButton.classList.remove('is-active');
+    
+    // Активируем первую категорию, чтобы показать только её статьи
+    setTimeout(function() {
+      firstHubButton.click();
+    }, 100);
+  }
+})();
+</script>
