@@ -38,7 +38,8 @@
     {{- $hubs := .Collections.home_hubs.Items }}
     {{- if $hubs }}
     <div class="hub-filters" data-hub-filters>
-      <button class="hub-pill is-active" type="button" data-hub="all" data-hub-title="Blog" data-hub-description="Latest posts across all hubs.">All</button>
+   <!--   <button class="hub-pill is-active" type="button" data-hub="all" data-hub-title="Blog" data-hub-description="Latest posts across all hubs.">All</button>
+      -->
       {{- range $hubs }}
       <button class="hub-pill" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
       {{- end }}
@@ -50,10 +51,10 @@
     </div>
   </div>
 
-  {{- $articles := .Collections.home_articles.Items }}
-  {{- if $articles }}
+<!--  {{- $articles := .Collections.home_articles.Items }}
+  {{- if $articles }} -->
   <div class="grid blog-grid">
-    {{- range $articles }}
+    <!--{{- range $articles }}
     <article class="card blog-card" data-article-card data-hubs="{{- range $i, $hub := .FM.hub -}}{{- if $i }} {{ end -}}{{- $hub -}}{{- end -}}">
       <a class="blog-link" href="{{ $.BaseURL }}{{ .Path }}">
         {{- if .FM.image }}
@@ -74,7 +75,8 @@
     </article>
     {{- end }}
   </div>
-  {{- else }}
+  {{- else }}-->
   <p class="muted">No articles yet.</p>
-  {{- end }}
+  <!--{{- end }}-->
+  </div>
 </section>
