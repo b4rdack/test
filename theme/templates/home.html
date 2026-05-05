@@ -38,16 +38,16 @@
     {{- $hubs := .Collections.home_hubs.Items }}
     {{- if $hubs }}
     <div class="hub-filters" data-hub-filters>
-      <button class="hub-pill is-active" type="button" data-hub="all" data-hub-title="Blog" data-hub-description="Latest posts across all hubs.">All</button>
+ <!--     <button class="hub-pill is-active" type="button" data-hub="all" data-hub-title="Blog" data-hub-description="Latest posts across all hubs.">All</button> -->
       {{- range $hubs }}
       <button class="hub-pill" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
       {{- end }}
     </div>
     {{- end }}
-    <div class="hub-meta">
+<!--    <div class="hub-meta">
       <h3 data-blog-title>Latest posts across all hubs</h3>
       <p class="muted" data-blog-description>Select a hub to filter articles.</p>
-    </div>
+    </div> -->
   </div>
 
   {{- $articles := .Collections.home_articles.Items }}
