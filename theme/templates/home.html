@@ -51,10 +51,10 @@
     </div>
   </div>
 
-<!--  {{- $articles := .Collections.home_articles.Items }}
+<!--{{- $articles := .Collections.home_articles.Items }}
   {{- if $articles }} -->
-  <div class="grid blog-grid">
-    <!--{{- range $articles }}
+  <div class="grid blog-grid" data-articles-container>
+   <!-- {{- range $articles }}
     <article class="card blog-card" data-article-card data-hubs="{{- range $i, $hub := .FM.hub -}}{{- if $i }} {{ end -}}{{- $hub -}}{{- end -}}">
       <a class="blog-link" href="{{ $.BaseURL }}{{ .Path }}">
         {{- if .FM.image }}
