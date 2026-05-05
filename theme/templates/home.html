@@ -36,6 +36,7 @@
   <div class="blog-header">
     <h2>Blog</h2>
     {{- $hubs := .Collections.home_hubs.Items }}
+    {{- $firstHub := index $hubs 0 }}
     {{- if $hubs }}
     <div class="hub-filters" data-hub-filters>
    <!--   <button class="hub-pill is-active" type="button" data-hub="all" data-hub-title="Blog" data-hub-description="Latest posts across all hubs.">All</button>
